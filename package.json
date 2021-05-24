@@ -1,12 +1,12 @@
 {
   "name": "api-de-crushs",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "API criada para gerenciar os CRUSHs",
   "main": "server.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./build/server.js",
-    "start-dev": "NODE_ENV=development nodemon -L ./node_modules/.bin/ts-node ./server/server.ts"
+    "start-dev": "NODE_ENV=development nodemon -L --watch 'server/**/*.ts' --exec 'ts-node' ./server/server.ts"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
     "ES6",
     "MONGODB"
   ],
-  "author": "srgoogle23",
+  "author": "Jakeliny Gracielly",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/srgoogle23/api-de-crushs/issues"
@@ -28,6 +28,7 @@
   "homepage": "https://github.com/srgoogle23/api-de-crushs#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "http-status": "^1.2.0",
@@ -37,6 +38,7 @@
   },
   "devDependencies": {
     "@types/body-parser": "^1.17.0",
+    "@types/cors": "^2.8.4",
     "@types/express": "^4.16.0",
     "@types/http-status": "^0.2.30",
     "@types/mongoose": "^5.2.11",
